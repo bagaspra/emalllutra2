@@ -239,28 +239,9 @@
               <br>
             </div>
 
-            <div class='col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12'><br>
-            <button type='button' class='ps-btn ps-btn--fullwidth' style='padding:7px 10px' data-toggle='modal' data-target='#kuponProduk'>Buat Kupon / Voucher <span class='badge badge-secondary' style='background-color:#222; color:#fff; padding:5px 9px 4px 7px'><span class='kupon_button'>".$kupon->num_rows()."</span></span></button><hr>
-                <div class='form-group row' style='margin-bottom:5px'>
-                  <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Pre-Order</b></label>
-                    <div class='col-sm-9'>";
-                    if ($rows['pre_order']!=''){ $status = 'Ya'; $display = 'inline'; $style="width:40%; display:inline-block"; }else{ $status = 'Tidak'; $display = 'none'; $style=""; }
-                    echo "<select name='pre_order_status' id='pre_order_status' class='form-control form-mini' style='$style'>";
-                    $preorder = array('Tidak','Ya');
-                    for ($i=0; $i < count($preorder) ; $i++) { 
-                      if ($preorder[$i]==$status){
-                        echo "<option value='".$preorder[$i]."' selected>".$preorder[$i]."</option>";
-                      }else{
-                        echo "<option value='".$preorder[$i]."'>".$preorder[$i]."</option>";
-                      }
-                    }
-                    echo "</select>
-                    <div class='lama_pre_order' style='display:$display'><input type='number' style='width:30%; display:inline-block' class='form-control form-mini' name='pre_order' placeholder='0' value='$rows[pre_order]'> Hari</div>
-                    </div>
-                </div>
-
-                <div class='form-group row' style='margin-bottom:5px'>
-                <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Group Order</b></label>
+            
+                
+                
                   <div class='col-sm-9'>
                   <div id='group'>";
                   $group = $this->db->query("SELECT * FROM rb_produk_group where id_produk='$rows[id_produk]' ORDER BY id_group ASC");
@@ -275,112 +256,13 @@
                     $no++;
                   }
                   echo "</div>
-                      <a class='btn btn-success btn-sm btn-block' href=\"javascript:void(0);\" onclick=\"addElementg();\" style='background:#9e9e9e; border:1px solid #fff; font-size:11px'>Tambahkan</a>
                   </div>
                 </div>  
 
-                <div class='form-group row' style='margin-bottom:5px'>
-                  <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Merek</b></label>
-                  <div class='col-sm-9'>
-
-                  <input type='text' class='form-control form-mini' id='search' placeholder='Cari Merek,..' autocomplete='off'>
-                  <div class='checkbox-scroll'>
-                  <div id='options' style='padding:5px 0px'>";
-                  $_arrNilai = explode(',', $rows['tag']);
-                  foreach ($tag as $tag){
-                      $_ck = (array_search($tag['tag_seo'], $_arrNilai) === false)? '' : 'checked';
-                      echo "<div class='option-$tag[tag_seo]'>
-                        <input style='height:1em; margin-right:5px' type='checkbox' id='$tag[tag_seo]' name=tag[] value='$tag[tag_seo]' $_ck><label style='margin-bottom:0' class='option' for='$tag[tag_seo]'>$tag[nama_tag]</label>
-                      </div>";
-                  }
-                  echo "</div>
-                  </div>
-
-                  </div>
-                </div> 
                 
-                <datalist id='variasi'>
-                  <option value='Warna'>
-                  <option value='Ukuran'>
-                  <option value='lainnya'>
-                </datalist>";
-
-                $no = 1;
-                $noidcount = 0;
-                $variasi = $this->db->query("SELECT * FROM rb_produk_variasi where id_produk='$rows[id_produk]' ORDER BY id_variasi ASC");
-                if ($variasi->num_rows()>=1){
-                  foreach ($variasi->result_array() as $row) {
-                    if ($noidcount == 0){ $noid = ''; }else{ $noid = $noidcount; }
-                    if ($no=='1'){ $intextbox1 = count(explode(';',$row['variasi'])); }
-                    if ($no=='2'){$intextbox2 = count(explode(';',$row['variasi'])); }
-                    if ($no=='3'){$intextbox3 = count(explode(';',$row['variasi'])); }
-
-                    if ($noidcount=='0'){ $divid = ''; }else{ $divid = $noidcount; }
-                    echo "<div class='form-group row' style='margin-bottom:5px'>
-                    <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Variasi $no</b></label>
-                      <div class='col-sm-9'>
-                      <input type='text' list='variasi' class='form-control form-mini' name='variasix$no' style='font-weight:bold; color:red' value='$row[nama]' placeholder='- - - - - - - -' autocomplete='off'>
-                      <div id='content$noid'>";
-                        $ex = explode(';',$row['variasi']);
-                        $exx = explode(';',$row['variasi_harga']);
-                        $nameh = array('a','b','c');
-                        for ($i=0; $i < count($ex); $i++) { 
-                          $nomor = $i+1;
-                          echo "<div id='div".$divid."_$nomor'>
-                                  <input style='width:58%; display:inline-block' placeholder='Input $nomor.........' value='".$ex[$i]."' type='text' class='form-control form-mini' id='variasi".$no."_".$nomor."' name='variasi".$no."[]'>
-                                  <input style='width:40%; display:inline-block' placeholder='+ Harga $nomor.........' value='".$exx[$i]."' type='number' class='form-control form-mini' id='harga$nameh[$noidcount]".$no."_".$nomor."' name='harga$nameh[$noidcount]".$no."[]'>
-                                </div>";
-                        }
-                        echo "</div>
-                          <a href=\"javascript:void(0);\" onclick=\"addElement$noid();\"><i class='icon-plus-circle' style='color:green; font-weight:900'></i> Tambah</a>
-                          <a href=\"javascript:void(0);\" onclick=\"removeElement$noid();\"><i class='icon-cross-circle' style='color:red; font-weight:900'></i> Hapus</a>
-                      </div>
-                    </div>    
-                    <br>";
-                    $no++;
-                    $noidcount++;
-                  }
-                }
-
-                $total = (3-$variasi->num_rows());
-                $no = $variasi->num_rows()+1;
-                if ($variasi->num_rows() == 0){ 
-                  $noidx = ''; 
-                }else{ 
-                  $noidx = $variasi->num_rows(); 
-                }
-                $namehx = array('','a','b','c');
-                $data_example = array('','Warna','Ukuran','Lainnya');
-                for ($i=1; $i <= $total; $i++) { 
-                  if ($no=='1'){ $intextbox1 = 2; }
-                  if ($no=='2'){$intextbox2 = 2; }
-                  if ($no=='3'){$intextbox3 = 2; }
-
-                  if (($no-1)=='0'){ $divid = ''; }else{ $divid = ($no-1); }
-                  
-                  echo "<div class='form-group row' style='margin-bottom:5px'>
-                    <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Variasi $no</b></label>
-                      <div class='col-sm-9'>
-                      <input list='variasi' type='text' class='form-control form-mini' name='variasix$no' style='font-weight:bold; color:red' placeholder='- - - - - - - -' autocomplete='off'>
-                      <div id='content$noidx'>
-                        <div id='div".$divid."_1'>
-                        <input style='width:58%; display:inline-block' placeholder='Input 1 .........' type='text' class='form-control form-mini' id='variasi".$no."_1' name='variasi".$no."[]'>
-                        <input style='width:40%; display:inline-block' placeholder='+ Harga 1.........' type='number' class='form-control form-mini' id='hargac".$no."_1' name='hargac".$no."[]'>
-                        </div>
-                        <div id='div".$divid."_2'>
-                        <input style='width:58%; display:inline-block' placeholder='Input 2 .........' type='text' class='form-control form-mini' id='variasi".$no."_2' name='variasi".$no."[]'>
-                        <input style='width:40%; display:inline-block' placeholder='+ Harga 2.........' type='number' class='form-control form-mini' id='hargac".$no."_2' name='hargac".$no."[]'>
-                        </div>
-                      </div>
-                          <a href=\"javascript:void(0);\" onclick=\"addElement$noidx();\"><i class='icon-plus-circle' style='color:green; font-weight:900'></i> Tambah</a>
-                          <a href=\"javascript:void(0);\" onclick=\"removeElement$noidx();\"><i class='icon-cross-circle' style='color:red; font-weight:900'></i> Hapus</a>
-                      </div>
-                    </div>    
-                    <br>";
-                    $no++;
-                    $noidx++;
-                }
-            echo "</div>
+                
+                ";
+            echo "
 
               <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'><br>
                 <div class='box-footer'>

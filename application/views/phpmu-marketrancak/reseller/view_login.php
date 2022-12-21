@@ -100,7 +100,7 @@ $('.digit-group').find('input').each(function() {
                         <div class="form-group submit">
                             <button type='submit' name='login' class="ps-btn gray-btn ps-btn--fullwidth spinnerButton">Masuk</button>
                             <p style="text-align:center; margin-top:10px">Belum punya akun? <a style='color:#000; text-decoration:underline; font-weight:bold' href="<?php echo base_url(); ?>auth/login" class="btn-register" target="_parent">Daftar sekarang!</a></p>
-                            <div class="logtext">metode lainnya</div>
+                            <!-- <div class="logtext">metode lainnya</div> -->
                             <?php
                             $ci = &get_instance();
                             if (config('google_client_id')!=''){
@@ -133,7 +133,7 @@ $('.digit-group').find('input').each(function() {
                         <p><input type='checkbox' checked required> Dengan mendaftar, Berarti Anda telah menyetujui <a target='_BLANK' style='color:#000' href='<?php echo base_url()."halaman/detail/$row1[judul_seo]"; ?>'>Perjanjian Pengguna</a> dan <a target='_BLANK' style='color:#000' href='<?php echo base_url()."halaman/detail/$row2[judul_seo]"; ?>'>Kebijakan Privasi</a></p>
                         <div class="form-group submit">
                             <button type='submit' name='submit2' class="ps-btn ps-btn--fullwidth gray-btn custom-btn spinnerButton">Mendaftar</button>
-                            <div class='logtext'>metode lainnya</div>
+                            <!-- <div class='logtext'>metode lainnya</div> -->
                             <?php 
                                 $ci = & get_instance();
                                 if (config('google_client_id')!=''){

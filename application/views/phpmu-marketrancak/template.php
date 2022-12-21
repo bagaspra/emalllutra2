@@ -1158,11 +1158,8 @@
                                                 <ul class="ps-dropdown-menu">
                                                     <li><a href="<?php echo base_url(); ?>members/profil_toko"><i class='fa fa-gears'></i> Pengaturan</a></li>
                                                     <li><a href="<?php echo base_url(); ?>members/produk"><i class='fa fa-th'></i> Daftar Produk</a></li>
-                                                    <li><a href="<?php echo base_url(); ?>members/alamat_cod"><i class='fa fa-map-marker'></i>&nbsp; Alamat Transaksi COD</a></li>
-                                                    <li><a href="<?php echo base_url(); ?>members/pembelian"><i class='fa fa-reorder'></i> Orders Pusat (Reseller)</a></li>
+                                                    <li><a href="<?php echo base_url(); ?>members/alamat_cod"><i class='fa fa-map-marker'></i>&nbsp; Alamat Transaksi</a></li>
                                                     <li><a href="<?php echo base_url(); ?>komplain?s=terlapor"><i class='fa fa-warning'></i> Komplain (Terlapor) <span class="badge badge-secondary" style='font-size:85%; background-color: #cecece; color:#000'><?php echo $komplain_toko->num_rows(); ?></span></a></li>
-                                                    <li><a href="<?php echo base_url(); ?>members/penjualan"><i class='fa fa-list-alt'></i> Orders Masuk <span class="badge badge-secondary" style='font-size:85%; background-color: #cecece; color:#000'><?php echo total_penjualan('0', reseller($this->session->id_konsumen)); ?></span></a></li>
-                                                    <li><a href="<?php echo base_url(); ?>members/upgrade"><i class="fa fa-star text-yellow"></i> <span class="blink_me">Upgrade Toko</span></a></li>
                                                 </ul>
                                             </div>
                                         </li>
@@ -1192,7 +1189,7 @@
                                             echo "<div class='ps-dropdown'>
                                                     <a style='padding-right:0px' href='#'>Akun <span class='badge badge-secondary'>".($komplain_beli->num_rows()+$cek_pesanan_sopir)."</span> <span class='fa fa-chevron-down'></span></a>
                                                     <ul class='ps-dropdown-menu'>";
-                                                            $data = array('<i class="icon-user"></i> Profile','<i class="icon-couch"></i> Sosmed','<i class="icon-bag-dollar"></i> Data Bank','<i class="fa fa-money"></i> Keuangan','<i class="icon-heart"></i> Wishlist','<i class="icon-bag2"></i> Pembelian','<i class="icon-phone"></i> PPOB','<i class="icon-car"></i> Jadi Kurir '.$pesanan_sopir.'');
+                                                            $data = array('<i class="icon-user"></i> Profile','<i class="icon-couch"></i> Sosmed');
                                                             $link = array('profile','sosial_media','rekening_bank','withdraw','wishlist','orders_report','trx_pulsa','sopir');
                                                             for ($i=0; $i < count($data); $i++) { 
                                                                 echo "<li><a href='".base_url()."members/".$link[$i]."'>".$data[$i]."</a></li>";

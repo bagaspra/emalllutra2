@@ -67,7 +67,7 @@
                 <div class='ps-product__badge'>".stok(reseller($this->session->id_konsumen),$row['id_produk'])." $row[satuan]</div>
                 <ul class='ps-product__actions produk-$row[id_produk]'>
                     <li><a href='#' data-toggle='tooltip' data-placement='top' title='Quick View' class='quick_view' data-id='$row[id_produk]'><i class='icon-eye'></i></a></li>
-                    <li><a href='".base_url().$this->uri->segment(1)."/edit_produk/$row[id_produk]' data-toggle='tooltip' data-placement='top' title='Kupon / Edit Produk'><i class='fa fa-edit'></i></a></li>
+                    <li><a href='".base_url().$this->uri->segment(1)."/edit_produk/$row[id_produk]' data-toggle='tooltip' data-placement='top' title='Edit Produk'><i class='fa fa-edit'></i></a></li>
                     <li><a href='".base_url().$this->uri->segment(1)."/delete_produk/$row[id_produk]' data-toggle='tooltip' data-placement='top' title='Delete Produk' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><i class='icon-cross'></i></a></li></ul>
                 </div>
                 

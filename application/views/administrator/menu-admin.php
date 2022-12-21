@@ -24,10 +24,10 @@
                   echo "<li><a href='".base_url().$this->uri->segment(1)."/logowebsite'><i class='fa fa-circle-o'></i> Logo Website</a></li>";
                 }
 
-                $cek=$this->model_app->umenu_akses("templatewebsite",$this->session->id_session);
-                if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li><a href='".base_url().$this->uri->segment(1)."/templatewebsite'><i class='fa fa-circle-o'></i> Template Website</a></li>";
-                }
+                // $cek=$this->model_app->umenu_akses("templatewebsite",$this->session->id_session);
+                // if($cek==1 OR $this->session->level=='admin'){
+                //   echo "<li><a href='".base_url().$this->uri->segment(1)."/templatewebsite'><i class='fa fa-circle-o'></i> Template Website</a></li>";
+                // }
 
                 $cek=$this->model_app->umenu_akses("background",$this->session->id_session);
                 if($cek==1 OR $this->session->level=='admin'){
@@ -39,15 +39,15 @@
                   echo "<li><a href='".base_url().$this->uri->segment(1)."/menuwebsite'><i class='fa fa-circle-o'></i> Menu Website</a></li>";
                 }
 
-                $cek=$this->model_app->umenu_akses("halamanbaru",$this->session->id_session);
-                if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li><a href='".base_url().$this->uri->segment(1)."/halamanbaru'><i class='fa fa-circle-o'></i> Halaman Baru</a></li>";
-                }
+                // $cek=$this->model_app->umenu_akses("halamanbaru",$this->session->id_session);
+                // if($cek==1 OR $this->session->level=='admin'){
+                //   echo "<li><a href='".base_url().$this->uri->segment(1)."/halamanbaru'><i class='fa fa-circle-o'></i> Halaman Baru</a></li>";
+                // }
                 
-                $cek=$this->model_app->umenu_akses("subscribe",$this->session->id_session);
-                if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li><a href='".base_url().$this->uri->segment(1)."/subscribe'><i class='fa fa-circle-o'></i> E-mail Subscribe</a></li>";
-                }
+                // $cek=$this->model_app->umenu_akses("subscribe",$this->session->id_session);
+                // if($cek==1 OR $this->session->level=='admin'){
+                //   echo "<li><a href='".base_url().$this->uri->segment(1)."/subscribe'><i class='fa fa-circle-o'></i> E-mail Subscribe</a></li>";
+                // }
               ?>
               </ul>
             </li>
@@ -70,24 +70,24 @@
                     echo "<li><a href='".base_url().$this->uri->segment(1)."/imagesslider'><i class='fa fa-circle-o'></i> Image Slider</a></li>";
                   }
 
-                  $cek=$this->model_app->umenu_akses("ppob_margin",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/ppob_margin'><i class='fa fa-circle-o'></i> Margin PPOB</a></li>";
-                  }
+                  // $cek=$this->model_app->umenu_akses("ppob_margin",$this->session->id_session);
+                  // if($cek==1 OR $this->session->level=='admin'){
+                  //   echo "<li><a href='".base_url().$this->uri->segment(1)."/ppob_margin'><i class='fa fa-circle-o'></i> Margin PPOB</a></li>";
+                  // }
 
-                  $cek=$this->model_app->umenu_akses("paket",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/paket'><i class='fa fa-circle-o'></i> Paket Star Seller</a></li>";
-                  }
-                  $cek=$this->model_app->umenu_akses("kurir_rajaongkir",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/kurir_rajaongkir'><i class='fa fa-circle-o'></i> Kurir Rajaongkir</a></li>";
-                  }
+                  // $cek=$this->model_app->umenu_akses("paket",$this->session->id_session);
+                  // if($cek==1 OR $this->session->level=='admin'){
+                  //   echo "<li><a href='".base_url().$this->uri->segment(1)."/paket'><i class='fa fa-circle-o'></i> Paket Star Seller</a></li>";
+                  // }
+                  // $cek=$this->model_app->umenu_akses("kurir_rajaongkir",$this->session->id_session);
+                  // if($cek==1 OR $this->session->level=='admin'){
+                  //   echo "<li><a href='".base_url().$this->uri->segment(1)."/kurir_rajaongkir'><i class='fa fa-circle-o'></i> Kurir Rajaongkir</a></li>";
+                  // }
 
-                  $cek=$this->model_app->umenu_akses("kupon_ongkir",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/kupon_ongkir'><i class='fa fa-circle-o'></i> Kupon Gratis Ongkir</a></li>";
-                  }
+                  // $cek=$this->model_app->umenu_akses("kupon_ongkir",$this->session->id_session);
+                  // if($cek==1 OR $this->session->level=='admin'){
+                  //   echo "<li><a href='".base_url().$this->uri->segment(1)."/kupon_ongkir'><i class='fa fa-circle-o'></i> Kupon Gratis Ongkir</a></li>";
+                  // }
                 ?>
               </ul>
             </li>
@@ -106,15 +106,15 @@
                     echo "<li><a href='".base_url().$this->uri->segment(1)."/reseller'><i class='fa fa-circle-o'></i> Reseller / Pelapak</a></li>";
                   }
 
-                  $cek=$this->model_app->umenu_akses("sopir",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/sopir'><i class='fa fa-circle-o'></i> Sopir / Kurir Internal</a></li>";
-                  }
+                  // $cek=$this->model_app->umenu_akses("sopir",$this->session->id_session);
+                  // if($cek==1 OR $this->session->level=='admin'){
+                  //   echo "<li><a href='".base_url().$this->uri->segment(1)."/sopir'><i class='fa fa-circle-o'></i> Sopir / Kurir Internal</a></li>";
+                  // }
 
-                  $cek=$this->model_app->umenu_akses("supplier",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/supplier'><i class='fa fa-circle-o'></i> Supplier</a></li>";
-                  }
+                  // $cek=$this->model_app->umenu_akses("supplier",$this->session->id_session);
+                  // if($cek==1 OR $this->session->level=='admin'){
+                  //   echo "<li><a href='".base_url().$this->uri->segment(1)."/supplier'><i class='fa fa-circle-o'></i> Supplier</a></li>";
+                  // }
 
                   $cek=$this->model_app->umenu_akses("kategori_produk",$this->session->id_session);
                   if($cek==1 OR $this->session->level=='admin'){
@@ -136,10 +136,10 @@
                     echo "<li><a href='".base_url().$this->uri->segment(1)."/produk'><i class='fa fa-circle-o'></i> Produk</a></li>";
                   }
 
-                  $cek=$this->model_app->umenu_akses("forum",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/forum'><i class='fa fa-circle-o'></i> Forum Diskusi</a></li>";
-                  }
+                  // $cek=$this->model_app->umenu_akses("forum",$this->session->id_session);
+                  // if($cek==1 OR $this->session->level=='admin'){
+                  //   echo "<li><a href='".base_url().$this->uri->segment(1)."/forum'><i class='fa fa-circle-o'></i> Forum Diskusi</a></li>";
+                  // }
 
                   // $cek=$this->model_app->umenu_akses("ongkir_driver",$this->session->id_session);
                   // if($cek==1 OR $this->session->level=='admin'){
@@ -149,117 +149,17 @@
               </ul>
             </li>
 
-            <li class="treeview">
-              <a href="#"><i class="fa fa-shopping-cart"></i> <span>Transaksi</span><i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-                <?php 
-                  $cek=$this->model_app->umenu_akses("penawaran",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/penawaran'><i class='fa fa-circle-o'></i> Flash Deal / Penawaran</a></li>";
-                  }
-                  
-                  $cek=$this->model_app->umenu_akses("pembelian",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/pembelian'><i class='fa fa-circle-o'></i> Perusahaan ke Supplier</a></li>";
-                  }
-
-                  $cek=$this->model_app->umenu_akses("penjualan",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/penjualan'><i class='fa fa-circle-o'></i> Penjualan ke Reseller</a></li>";
-                  }
-
-                  $cek=$this->model_app->umenu_akses("pembayaran_reseller",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/pembayaran_reseller'><i class='fa fa-circle-o'></i> Pembayaran Reseller</a></li>";
-                  }
-
-                  $cek=$this->model_app->umenu_akses("penjualan_konsumen",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/penjualan_konsumen'><i class='fa fa-circle-o'></i> Penjualan ke Konsumen</a></li>";
-                  }
-
-                  $cek=$this->model_app->umenu_akses("komplain",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/komplain'><i class='fa fa-circle-o'></i> Komplain Orders</a></li>";
-                  }
-
-                  $cek=$this->model_app->umenu_akses("pembayaran_konsumen",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/pembayaran_konsumen'><i class='fa fa-circle-o'></i> Konf. Order Konsumen</a></li>";
-                  }
-
-                  $cek=$this->model_app->umenu_akses("mutasi",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/mutasi'><i class='fa fa-circle-o'></i> Data Mutasi Bank</a></li>";
-                  }
-
-                  $cek=$this->model_app->umenu_akses("withdraw",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/withdraw'><i class='fa fa-circle-o'></i> Trans. Keuangan</a></li>";
-                  }
-
-                  $cek=$this->model_app->umenu_akses("reseller_paket",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/reseller_paket'><i class='fa fa-circle-o'></i> Trans. Paket Reseller</a></li>";
-                  }
-
-                ?>
-              </ul>
-            </li>
-
-            <li class="treeview">
-              <a href="#"><i class="fa fa-book"></i> <span>Report</span><i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-                <?php 
-                  $cek=$this->model_app->umenu_akses("reseller_transaksi",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/reseller_transaksi'><i class='fa fa-circle-o'></i> Rekap Transaksi</a></li>";
-                  }
-
-                  $cek=$this->model_app->umenu_akses("testimoni",$this->session->id_session);
-                  if($cek==1 OR $this->session->level=='admin'){
-                    echo "<li><a href='".base_url().$this->uri->segment(1)."/testimoni'><i class='fa fa-circle-o'></i> Testimoni Konsumen</a></li>";
-                  }
-                ?>
-              </ul>
-            </li>
+            
             
             <li class="header">Website</li>
-            <li class="treeview">
-              <a href="#"><i class="glyphicon glyphicon-pencil"></i> <span>Modul Berita</span><i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-              <?php
-                $cek=$this->model_app->umenu_akses("listberita",$this->session->id_session);
-                if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li><a href='".base_url().$this->uri->segment(1)."/listberita'><i class='fa fa-circle-o'></i> Berita</a></li>";
-                }
-
-                $cek=$this->model_app->umenu_akses("kategoriberita",$this->session->id_session);
-                if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li><a href='".base_url().$this->uri->segment(1)."/kategoriberita'><i class='fa fa-circle-o'></i> Kategori Berita</a></li>";
-                }
-
-                $cek=$this->model_app->umenu_akses("tagberita",$this->session->id_session);
-                if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li><a href='".base_url().$this->uri->segment(1)."/tagberita'><i class='fa fa-circle-o'></i> Tag Berita</a></li>";
-                }
-
-                $cek=$this->model_app->umenu_akses("komentarberita",$this->session->id_session);
-                if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li><a href='".base_url().$this->uri->segment(1)."/komentarberita'><i class='fa fa-circle-o'></i> Komentar Berita</a></li>";
-                }
-              ?>
-              </ul>
-            </li>
-
             <li class="treeview">
               <a href="#"><i class="glyphicon glyphicon-blackboard"></i> <span>Modul Iklan</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
               <?php
-                $cek=$this->model_app->umenu_akses("iklanatas",$this->session->id_session);
-                if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li><a href='".base_url().$this->uri->segment(1)."/edit_iklanatas'><i class='fa fa-circle-o'></i> Iklan Popup</a></li>";
-                }
+                // $cek=$this->model_app->umenu_akses("iklanatas",$this->session->id_session);
+                // if($cek==1 OR $this->session->level=='admin'){
+                //   echo "<li><a href='".base_url().$this->uri->segment(1)."/edit_iklanatas'><i class='fa fa-circle-o'></i> Iklan Popup</a></li>";
+                // }
 
                 $cek=$this->model_app->umenu_akses("iklanhome",$this->session->id_session);
                 if($cek==1 OR $this->session->level=='admin'){
@@ -271,10 +171,10 @@
                   echo "<li><a href='".base_url().$this->uri->segment(1)."/iklansidebar'><i class='fa fa-circle-o'></i> Iklan Sidebar</a></li>";
                 }
 
-                $cek=$this->model_app->umenu_akses("banner",$this->session->id_session);
-                if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li><a href='".base_url().$this->uri->segment(1)."/banner'><i class='fa fa-circle-o'></i> Iklan Link</a></li>";
-                }
+                // $cek=$this->model_app->umenu_akses("banner",$this->session->id_session);
+                // if($cek==1 OR $this->session->level=='admin'){
+                //   echo "<li><a href='".base_url().$this->uri->segment(1)."/banner'><i class='fa fa-circle-o'></i> Iklan Link</a></li>";
+                // }
               ?>
               </ul>
             </li>

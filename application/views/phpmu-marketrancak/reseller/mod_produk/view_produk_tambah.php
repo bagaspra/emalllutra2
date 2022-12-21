@@ -112,15 +112,6 @@
                 <div class='col-sm-9'>
                   <div class='form-row'>
                     <div class='form-group col-md-4' style='margin-bottom:5px'>
-                      <label style='margin-bottom:1px'>Harga Modal</label>
-                      <div class='input-group'>
-                      <div class='input-group-prepend'>
-                        <div class='input-group-text'>Rp</div>
-                      </div>
-                      <input type='text' class='form-control form-mini formatNumber' name='d' value='0' placeholder='-' required>
-                      </div>
-                    </div>
-                    <div class='form-group col-md-4' style='margin-bottom:5px'>
                       <label style='margin-bottom:1px'>Harga Jual</label>
                       <div class='input-group'>
                       <div class='input-group-prepend'>
@@ -142,12 +133,7 @@
                 </div>
               </div> 
 
-              <div class='form-group row' style='margin-bottom:5px'>
-                <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Stock Keeping Unit</b> <small><i style='color:#8a8a8a'>Kode unik SKU jika ingin menandai produk.</i></small></label>
-                  <div class='col-sm-9'>
-                  <input type='text' class='form-control form-mini' name='sku' placeholder=''> 
-                  </div>
-              </div>
+              
 
               <div class='form-group row' style='margin-bottom:5px'>
                 <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Min. Order</b></label>
@@ -195,118 +181,6 @@
               </div>
               <br>
               
-            </div>
-
-            <div class='col-xl-5 col-lg-45 col-md-5 col-sm-12 col-12'><br>
-              
-              <div class='form-group row' style='margin-bottom:5px'>
-                <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Pre-Order</b></label>
-                  <div class='col-sm-9'>
-                  <select name='pre_order_status' id='pre_order_status' class='form-control form-mini'>";
-                  $preorder = array('Tidak','Ya');
-                  for ($i=0; $i < count($preorder) ; $i++) { 
-                    echo "<option value='".$preorder[$i]."'>".$preorder[$i]."</option>";
-                  }
-                  echo "</select>
-                  <div class='lama_pre_order' style='display:none'><input type='number' style='width:30%; display:inline-block' class='form-control form-mini' name='pre_order' value='2'> Hari</div>
-                  </div>
-              </div>
-
-              <div class='form-group row' style='margin-bottom:5px'>
-              <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Group Order</b></label>
-                <div class='col-sm-9'>
-                <div id='group'>
-                  <div id='div3_1'>
-                    <input style='width:39%; display:inline-block' placeholder='Jumlah 1' type='number' class='form-control form-mini' id='jumlah_1' name='jumlah[]'>
-                    <input style='width:58%; display:inline-block' placeholder='Harga Group 1' type='number' class='form-control form-mini' id='harga_1' name='harga[]'>
-                  </div>
-                </div>
-                    <a href=\"javascript:void(0);\" onclick=\"addElementg();\"><i class='icon-plus-circle' style='color:green; font-weight:900'></i> Tambah</a>
-                    <a href=\"javascript:void(0);\" onclick=\"removeElementg();\"><i class='icon-cross-circle' style='color:red; font-weight:900'></i> Hapus</a>
-                </div>
-              </div>    
-
-              <div class='form-group row' style='margin-bottom:5px'>
-              <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Merek</b></label>
-                <div class='col-sm-9'>
-
-                <input type='text' class='form-control form-mini' id='search' placeholder='Cari Merek,..' autocomplete='off'>
-                <div class='checkbox-scroll'>
-                <div id='options' style='padding:5px 0px'>";
-                foreach ($tag as $tag){
-                    echo "<div class='option-$tag[tag_seo]'>
-                            <input style='height:1em; margin-right:5px' type='checkbox' id='$tag[tag_seo]' name=tag[] value='$tag[tag_seo]'><label style='margin-bottom:0' class='option' for='$tag[tag_seo]'>$tag[nama_tag]</label>
-                          </div>";
-                }
-                echo "</div>
-                </div>
-
-                </div>
-              </div>  
-
-              <div class='form-group row' style='margin-bottom:5px'>
-              <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Variasi 1</b></label>
-                <div class='col-sm-9'>
-                <input type='text' list='variasi' class='form-control form-mini' name='variasi1' style='font-weight:bold; color:red' placeholder='- - - - - - - -' autocomplete='off'>
-                <datalist id='variasi'>
-                  <option value='Warna'>
-                  <option value='Ukuran'>
-                  <option value='lainnya'>
-                </datalist>
-                <div id='content'>
-                  <div id='div_1'>
-                    <input style='width:58%; display:inline-block' placeholder='Input 1 .........' type='text' class='form-control form-mini' id='warna_1' name='warna[]'>
-                    <input style='width:40%; display:inline-block' placeholder='+ Harga 1 .........' type='number' class='form-control form-mini' id='hargaa_1' name='hargaa[]'>
-                  </div>
-
-                  <div id='div_2'>
-                    <input style='width:58%; display:inline-block' placeholder='Input 2 .........' type='text' class='form-control form-mini' id='warna_2' name='warna[]'>
-                    <input style='width:40%; display:inline-block' placeholder='+ Harga 2 .........' type='number' class='form-control form-mini' id='hargaa_2' name='hargaa[]'>
-                  </div>
-                </div>
-                    <a href=\"javascript:void(0);\" onclick=\"addElement();\"><i class='icon-plus-circle' style='color:green; font-weight:900'></i> Tambah</a>
-                    <a href=\"javascript:void(0);\" onclick=\"removeElement();\"><i class='icon-cross-circle' style='color:red; font-weight:900'></i> Hapus</a>
-                </div>
-              </div>    
-              <br>
-              <div class='form-group row' style='margin-bottom:5px'>
-              <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Variasi 2</b></label>
-                <div class='col-sm-9'>
-                <input type='text' list='variasi' class='form-control form-mini' name='variasi2' style='font-weight:bold; color:red' placeholder='- - - - - - - -' autocomplete='off'>
-                <div id='content1'>
-                  <div id='div1_1'>
-                    <input style='width:58%; display:inline-block' placeholder='Input 1 .........' type='text' class='form-control form-mini' id='ukuran_1' name='ukuran[]'>
-                    <input style='width:40%; display:inline-block' placeholder='+ Harga 1 .........' type='number' class='form-control form-mini' id='hargab_1' name='hargab[]'>
-                  </div>
-                  <div id='div1_2'>
-                    <input style='width:58%; display:inline-block' placeholder='Input 2 .........' type='text' class='form-control form-mini' id='ukuran_2' name='ukuran[]'>
-                    <input style='width:40%; display:inline-block' placeholder='+ Harga 2 .........' type='number' class='form-control form-mini' id='hargab_2' name='hargab[]'>
-                  </div>
-                </div>
-                    <a href=\"javascript:void(0);\" onclick=\"addElement1();\"><i class='icon-plus-circle' style='color:green; font-weight:900'></i> Tambah</a>
-                    <a href=\"javascript:void(0);\" onclick=\"removeElement1();\"><i class='icon-cross-circle' style='color:red; font-weight:900'></i> Hapus</a>
-                </div>
-              </div>    
-              <br>
-              <div class='form-group row' style='margin-bottom:5px'>
-              <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Variasi 3</b></label>
-                <div class='col-sm-9'>
-                <input type='text'  list='variasi' class='form-control form-mini' name='variasi3' style='font-weight:bold; color:red' placeholder='- - - - - - - -' autocomplete='off'>
-                <div id='content2'>
-                  <div id='div2_1'>
-                    <input style='width:58%; display:inline-block' placeholder='Input 1 .........' type='text' class='form-control form-mini' id='lainnya_1' name='lainnya[]'>
-                    <input style='width:40%; display:inline-block' placeholder='+ Harga 1 .........' type='number' class='form-control form-mini' id='hargac_1' name='hargac[]'>
-                  </div>
-                  <div id='div2_2'>
-                    <input style='width:58%; display:inline-block' placeholder='Input 2 .........' type='text' class='form-control form-mini' id='lainnya_2' name='lainnya[]'>
-                    <input style='width:40%; display:inline-block' placeholder='+ Harga 2 .........' type='number' class='form-control form-mini' id='hargac_2' name='hargac[]'>
-                  </div>
-                </div>
-                    <a href=\"javascript:void(0);\" onclick=\"addElement2();\"><i class='icon-plus-circle' style='color:green; font-weight:900'></i> Tambah</a>
-                    <a href=\"javascript:void(0);\" onclick=\"removeElement2();\"><i class='icon-cross-circle' style='color:red; font-weight:900'></i> Hapus</a>
-                </div>
-              </div>   
-
             </div>
             <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
             <div class='box-footer'>
